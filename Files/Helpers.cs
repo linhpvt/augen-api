@@ -69,8 +69,7 @@ namespace contactapi.Helpers
         */
         public static ResponseContacts search(string fileName, string term, int pageNumber, int pageSize)
         {
-            Models.ResponseContacts responseContacts = new Models.ResponseContacts();
-            responseContacts.code = 0;
+            ResponseContacts responseContacts = new ResponseContacts();
 
             // File does not exist
             if (!File.Exists(fileName))
@@ -101,7 +100,6 @@ namespace contactapi.Helpers
 
             contacts = query.ToList();
             int total = contacts.Count;
-            responseContacts.data = new Data();
             responseContacts.data.total = total;
             
             // extract data with specific page
