@@ -1,0 +1,14 @@
+D:\Projects\contactapi\bin\Debug\netcoreapp2.2\contactapi.deps.json
+D:\Projects\contactapi\bin\Debug\netcoreapp2.2\contactapi.runtimeconfig.json
+D:\Projects\contactapi\bin\Debug\netcoreapp2.2\contactapi.runtimeconfig.dev.json
+D:\Projects\contactapi\bin\Debug\netcoreapp2.2\contactapi.dll
+D:\Projects\contactapi\bin\Debug\netcoreapp2.2\contactapi.pdb
+D:\Projects\contactapi\obj\Debug\netcoreapp2.2\contactapi.csprojAssemblyReference.cache
+D:\Projects\contactapi\obj\Debug\netcoreapp2.2\contactapi.csproj.CoreCompileInputs.cache
+D:\Projects\contactapi\obj\Debug\netcoreapp2.2\contactapi.RazorAssemblyInfo.cache
+D:\Projects\contactapi\obj\Debug\netcoreapp2.2\contactapi.RazorAssemblyInfo.cs
+D:\Projects\contactapi\obj\Debug\netcoreapp2.2\contactapi.AssemblyInfoInputs.cache
+D:\Projects\contactapi\obj\Debug\netcoreapp2.2\contactapi.AssemblyInfo.cs
+D:\Projects\contactapi\obj\Debug\netcoreapp2.2\contactapi.RazorTargetAssemblyInfo.cache
+D:\Projects\contactapi\obj\Debug\netcoreapp2.2\contactapi.dll
+D:\Projects\contactapi\obj\Debug\netcoreapp2.2\contactapi.pdb

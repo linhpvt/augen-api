@@ -1,0 +1,42 @@
+Research .NET core and setup working environment.
+1. Donwload and install .NET SDK
+ - Spent time: 15 minutes
+
+2 Create and run dotnet console application to check out .NET Core is installed properly
+ - Using command line `dotnet new console -o ConsoleApp`.
+ - Using command line to run ConsoleApp successfully.
+ - Spent time: 5 minutes
+
+3. Download and install Visual Studio 2019 community Version
+10:30
+- Time spent: 15 minutes
+
+4. Create new WebAPI project
+- Using command line `dotnet new -o webapi` to create new webapi project.
+- Start webapi with visual studio IDE
+- Checking first APIs started successfully; access https://localhost:44310/api/values and browser displayed: ["value1","value2"]
+- Spent time: 10 minutes
+
+
+5. Adding new ContactsController to the project
+ - Adding new ContactsController
+ - Test contacts api
+ - Spent time: 7 minutes.
+ 
+6. Research getting query strings of GET mothod from webAPI
+ - Spent time: 5 minutes
+
+7. Research reading file and respond client with specific format { code, error, data: { total, result } }
+
+ - implement readFile function by passing a filePath argument
+ - implement search with some parameters: term, pageNumber, pageSize
+ 12h - 1h
+ 2h - 3:25h
+ Spent time: ....
+
+
+
+
+
+
+
