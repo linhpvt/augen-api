@@ -110,9 +110,6 @@ namespace contactapi.Helpers
                 int count = total > (startIndex + pageSize) ? pageSize : total - ((pageNumber - 1) * pageSize);
                 contacts = contacts.GetRange(startIndex, count);
                 responseContacts.data.result = contacts;
-            } else
-            {
-                responseContacts.data.result = new List<Contact>();
             }
 
             return responseContacts;
