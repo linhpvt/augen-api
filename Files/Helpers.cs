@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using contactapi.Models;
 
 namespace contactapi.Helpers
 {
     public class Helpers
     {
+        /**
+         * The function reads csv data from a given fileName
+         * Return a null value if any unexpected operations occured, otherwise, return contact list 
+        */
         public static List<Contact> readFile(string fileName)
         {
             List<Contact> contacts = null;
@@ -18,7 +21,7 @@ namespace contactapi.Helpers
                 string[] lines = File.ReadAllLines(fileName);
                 foreach(string line in lines)
                 {
-                    Console.WriteLine(line);
+                    // Console.WriteLine(line);
                     Contact contact = buildOneContact(line);
                     if (contact != null)
                     {
@@ -33,7 +36,10 @@ namespace contactapi.Helpers
             return contacts;
         }
 
-        private static Models.Contact buildOneContact(string line)
+        /**
+         * The function recieve an csv row data and return a Contact object
+        */
+        private static Contact buildOneContact(string line)
         {
             string[] items = line.Split(",");
             /*[
@@ -57,6 +63,10 @@ namespace contactapi.Helpers
             return contact;
         }
 
+        /**
+         * The function search a page of data and return client with specific format
+         * { code, error, data: { result, total } }
+        */
         public static ResponseContacts search(string fileName, string term, int pageNumber, int pageSize)
         {
             Models.ResponseContacts responseContacts = new Models.ResponseContacts();
@@ -70,7 +80,7 @@ namespace contactapi.Helpers
                 return responseContacts;
             }
 
-            List<Models.Contact> contacts = Helpers.readFile(fileName);
+            List<Contact> contacts = Helpers.readFile(fileName);
             
             // search not Ok
             if (contacts == null)
@@ -88,9 +98,10 @@ namespace contactapi.Helpers
                 ((contact.phone != null && contact.phone.ToLower().IndexOf(term) >= 0) || term == String.Empty)||
                 ((contact.email != null && contact.email.ToLower().IndexOf(term) >= 0) || term == String.Empty)
             ));
+
             contacts = query.ToList();
             int total = contacts.Count;
-            responseContacts.data = new Models.Data();
+            responseContacts.data = new Data();
             responseContacts.data.total = total;
             
             // extract data with specific page
